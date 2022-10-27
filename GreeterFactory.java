@@ -1,24 +1,28 @@
 public class GreeterFactory {
     public Greeter GenerateGreeter() {
-        return new Greeter("Hello!");
+        return new Greeter();
     }
     
     public Greeter GenerateGreeter(String type) {
-        if (type == "Midwesterner") {
-            return new Greeter("Howdy!");
+        if (type.equals("Midwesterner")) {
+            return new Greeter("Howdy");
         }
-        else if (type == "Italian") {
-            return new Greeter("Chow!");
+        else if (type.equals("Italian")) {
+            return new Greeter("Chow");
         }
-        else if (type == "Spanish") {
-            return new Greeter("Hola!");
+        else if (type.equals("Spanish")) {
+            return new Greeter("Hola");
         }
-        else if (type == "Formal") {
-            return new Greeter("Good day!");
+        else if (type.equals("Formal")) {
+            return new Greeter("Good day");
         }
         else {
-            return new Greeter("Hello!");
+            return new Greeter();
         }
+    }
+
+    public Greeter GenerateCustomGreeter(String greeting) {
+        return new Greeter(greeting);
     }
 
     public DoorGreeter GenerateDoorGreeter() {
@@ -26,20 +30,24 @@ public class GreeterFactory {
     }
 
     public DoorGreeter GenerateDoorGreeter(String type) {
-        if (type == "Midwesterner") {
-            return new DoorGreeter("Howdy!");
+        if (type.equals("Midwesterner")) {
+            return new DoorGreeter("Howdy");
         }
-        else if (type == "Italian") {
-            return new DoorGreeter("Chow!");
+        else if (type.equals("Italian")) {
+            return new DoorGreeter("Chow");
         }
-        else if (type == "Spanish") {
-            return new DoorGreeter("Hola!");
+        else if (type.equals("Spanish")) {
+            return new DoorGreeter("Hola");
         }
-        else if (type == "Formal") {
-            return new DoorGreeter("Good day!");
+        else if (type.equals("Formal")) {
+            return new DoorGreeter("Good day");
         }
         else {
-            return new DoorGreeter("Hello!");
+            return new DoorGreeter();
         }
     }
+
+    public DoorGreeter GenerateCustomDoorGreeter(String greeting) {
+        return new DoorGreeter(greeting);
+    } 
 }

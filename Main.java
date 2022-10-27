@@ -1,14 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        GreeterFactory gf = new GreeterFactory();
-
-        Greeter built = gf.GenerateGreeter();
-
-        built.GreetWithName("Nathan");
-
-        DoorGreeter dbuilt = gf.GenerateDoorGreeter();
-        
-        dbuilt.GreetWithNameAtDoor("Nathan");
+        GreeterApp app = new GreeterApp();
+        app.Run();
     }
 }
 

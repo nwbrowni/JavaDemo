@@ -2,7 +2,7 @@ public class Greeter {
     String Greeting;
 
     public Greeter() {
-        Greeting = "Hello!";
+        Greeting = "Hello";
     }
 
     public Greeter(String greeting) {
@@ -10,7 +10,7 @@ public class Greeter {
     }
 
     public void Greet() {
-        System.out.println(Greeting);
+        System.out.println(Greeting + "!");
     }
 
     public void GreetWithName(String name) {
